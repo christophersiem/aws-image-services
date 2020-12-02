@@ -12,7 +12,7 @@
 	<artifactId>aws-uploader</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>aws-uploader</name>
-	<description>Demo project for Image Upload to AWS</description>
+	<description>Demo project for AWS Services </description>
 
 	<properties>
 		<java.version>11</java.version>
