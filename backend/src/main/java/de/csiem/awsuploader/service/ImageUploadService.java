@@ -2,7 +2,6 @@ package de.csiem.awsuploader.service;
 
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.SdkClientException;
-import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.regions.Regions;
@@ -25,10 +24,12 @@ public class ImageUploadService {
     @Value("${aws.secret.key}")
     private String secretKey;
 
+    @Value("${aws.bucket.name}")
+    private String bucketName;
+
     public String uploadImage(MultipartFile file) throws IOException, InterruptedException{
 
         Regions clientRegion = Regions.EU_CENTRAL_1;
-        String bucketName = "image-upload-demo-repo";
 
         BasicAWSCredentials awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
 
