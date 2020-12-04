@@ -10,4 +10,5 @@ export default function Heading({heading}) {
 const HeadingStyled = styled.h1`
 text-align: center;
 font-size: 1.5rem;
+color: var(--orange-main)
 `
