@@ -14,7 +14,7 @@ export default function FaceAnalyzePage() {
             <ImageUpload handleImage={handleImage} upload={upload} image={image}/>
             {faceData &&
             <div>
-                {faceData && <ImageStyled src={faceData.signedUrl} alt=""/>}
+                <ImageStyled src={faceData.signedUrl} alt=""/>
                 <p>You are {faceData?.gender?.value} and {getAge()} years old</p>
                 {faceData.emotions?.map(emotion => <p>{emotion.type}: {Math.round(emotion.confidence * 100) / 100}%</p>)}
             </div>}
