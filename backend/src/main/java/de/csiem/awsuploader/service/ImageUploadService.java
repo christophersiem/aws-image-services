@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.util.Date;
 
 @Service
-public class ImageService {
+public class ImageUploadService {
 
     private final AmazonS3ClientUtils amazonS3ClientUtils;
 
@@ -33,7 +33,7 @@ public class ImageService {
     private String bucketName;
 
     @Autowired
-    public ImageService(AmazonS3ClientUtils amazonS3ClientUtils) {
+    public ImageUploadService(AmazonS3ClientUtils amazonS3ClientUtils) {
         this.amazonS3ClientUtils = amazonS3ClientUtils;
     }
 
